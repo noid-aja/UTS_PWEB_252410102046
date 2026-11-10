@@ -4,6 +4,7 @@ Website belajar note musik pake tab (baru ada gitar, bass dan drum).
 Ada responsivenya
 Pake laravel, buat cssnya native
 
+Login dan register
 <img width="1804" height="999" alt="image" src="https://github.com/user-attachments/assets/81d26f48-98e3-47a1-99eb-4c68808e4d53" />
 <img width="1806" height="1004" alt="image" src="https://github.com/user-attachments/assets/698a7cab-6b68-4cf6-9e30-cb0db3cedeee" />
 
