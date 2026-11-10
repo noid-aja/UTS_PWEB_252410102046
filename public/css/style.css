@@ -42,7 +42,6 @@ p { margin: 0 0 1em; }
 
 .container { width: min(1080px, 100% - 2rem); margin: 0 auto; padding: 2rem 0 3rem; flex: 1; }
 
-/* Navbar */
 .navbar { border-bottom: 1px solid var(--line); background: rgba(20, 26, 51, .92); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(6px); }
 .navbar-inner { width: min(1080px, 100% - 2rem); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; }
@@ -57,13 +56,11 @@ p { margin: 0 0 1em; }
 .nav-links a.active { color: var(--ink); background: var(--amber); }
 .nav-links .nav-logout { border: 1px solid var(--line); }
 
-/* Footer */
 .footer { border-top: 1px solid var(--line); padding: 1.5rem 0; }
 .footer-inner { width: min(1080px, 100% - 2rem); margin: 0 auto; }
 .footer p { margin: 0 0 .2rem; }
 .footer-small { color: var(--muted); font-size: .9rem; }
 
-/* Cards, buttons, chips */
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
 .btn { display: inline-block; border: 0; cursor: pointer; background: var(--amber); color: var(--ink); font: inherit; font-weight: 800; padding: .75rem 1.4rem; border-radius: 10px; text-decoration: none; }
 .btn:hover { background: #ffc86f; color: var(--ink); }
@@ -75,7 +72,6 @@ p { margin: 0 0 1em; }
 .accent-coral { --accent: var(--coral); }
 .song, .song-mini { border-left: 6px solid var(--accent); }
 
-/* Auth pages */
 .auth { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; padding-top: 2rem; }
 .auth-single { grid-template-columns: minmax(0, 480px); justify-content: center; }
 .auth-intro p { color: var(--muted); max-width: 46ch; }
@@ -88,7 +84,6 @@ p { margin: 0 0 1em; }
 .alert { padding: .7rem 1rem; border-radius: 10px; margin-bottom: .5rem; }
 .alert-ok { background: rgba(53, 208, 192, .14); border: 1px solid var(--teal); color: var(--teal); }
 
-/* Tab: ciri khas situs ini, tampil seperti kertas tablature */
 .tab, .tab-sample {
     font-family: var(--mono);
     font-size: .95rem;
@@ -104,7 +99,6 @@ p { margin: 0 0 1em; }
 .tab-sample { display: inline-block; margin-top: 1.5rem; transform: rotate(-2deg); box-shadow: 8px 8px 0 var(--violet); }
 .tip { color: var(--muted); font-size: .95rem; }
 
-/* Dashboard */
 .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.5rem; align-items: center; padding: 1rem 0 2.5rem; }
 .hero p { color: var(--muted); max-width: 50ch; }
 .stats { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
@@ -115,7 +109,6 @@ p { margin: 0 0 1em; }
 .steps { padding-left: 1.4rem; max-width: 62ch; }
 .steps li { margin-bottom: .5rem; }
 
-/* Katalog */
 .page-head { margin-bottom: 1.5rem; }
 .page-head p { color: var(--muted); max-width: 62ch; }
 .switcher { margin: 1rem 0 .5rem; display: inline-flex; gap: .3rem; padding: .3rem; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; }
@@ -128,7 +121,6 @@ p { margin: 0 0 1em; }
 .inst-panel h3 { color: var(--accent); }
 .is-hidden { display: none; }
 
-/* Profil */
 .profile { display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; align-items: start; }
 .profile-card { text-align: center; }
 .avatar { width: 96px; height: 96px; margin: 0 auto 1rem; border-radius: 50%; display: grid; place-items: center; font-size: 2.6rem; font-weight: 800; color: var(--ink); background: var(--teal); }
@@ -141,7 +133,6 @@ p { margin: 0 0 1em; }
 .fav li { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid var(--line); }
 .fav li:last-child { border-bottom: 0; }
 
-/* Responsive */
 @media (max-width: 800px) {
     .auth, .hero, .profile { grid-template-columns: 1fr; gap: 1.5rem; }
     .auth-single { grid-template-columns: 1fr; }
@@ -152,7 +143,16 @@ p { margin: 0 0 1em; }
     * { transition: none !important; animation: none !important; }
 }
 
-/* Tab lengkap per lagu (buka/tutup) */
+.avatar-img {
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--teal);
+}
+
 .song-details { margin-top: .5rem; }
 .song-details summary { display: inline-flex; align-items: center; gap: .6rem; cursor: pointer; list-style: none; font-weight: 800; padding: .6rem 1.2rem; border-radius: 10px; background: var(--accent); color: var(--ink); }
 .song-details summary::-webkit-details-marker { display: none; }

@@ -120,7 +120,6 @@ class PageController extends Controller
 
         $songs = $this->songs();
 
-        // Contoh data profil (disimulasikan, bukan dari database)
         $skills = [
             ['name' => 'Gitar', 'percent' => 70, 'color' => 'amber'],
             ['name' => 'Bass',  'percent' => 45, 'color' => 'teal'],
@@ -129,6 +128,7 @@ class PageController extends Controller
 
         return view('profile', [
             'username'  => $username,
+            'photo'     => 'https://i.pinimg.com/736x/bb/a9/35/bba935170fb5e94e1ff23664f27350db.jpg',
             'skills'    => $skills,
             'favorites' => array_slice($songs, 0, 4),
             'since'     => now()->format('d M Y'),

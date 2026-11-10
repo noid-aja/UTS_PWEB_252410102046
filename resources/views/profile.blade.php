@@ -5,7 +5,11 @@
 @section('content')
 <section class="profile">
     <div class="card profile-card">
-        <div class="avatar" aria-hidden="true">{{ strtoupper(substr($username, 0, 1)) }}</div>
+        @if ($photo)
+            <img class="avatar-img" src="{{ $photo }}" alt="Foto profil {{ $username }}">
+        @else
+            <div class="avatar" aria-hidden="true">{{ strtoupper(substr($username, 0, 1)) }}</div>
+        @endif
         <h1>{{ $username }}</h1>
         <p class="muted">Bergabung sejak {{ $since }}</p>
     </div>
