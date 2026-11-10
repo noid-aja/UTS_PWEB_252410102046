@@ -27,7 +27,6 @@ class PageController extends Controller
             'password.min'      => 'Password minimal 7 karakter.',
         ]);
 
-        // Username dikirim ke Dashboard lewat request parameter (?username=...)
         return redirect()->route('dashboard', ['username' => $data['username']]);
     }
 
@@ -52,7 +51,6 @@ class PageController extends Controller
             'password.confirmed' => 'Konfirmasi password tidak sama.',
         ]);
 
-        // Tidak ada database: pendaftaran hanya simulasi lalu kembali ke login.
         return redirect()->route('login', [
             'registered' => 1,
             'username'   => $data['username'],

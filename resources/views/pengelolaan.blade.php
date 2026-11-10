@@ -53,7 +53,6 @@
 
 @section('scripts')
 <script>
-    // Tiap lagu punya tombol instrumen sendiri
     document.querySelectorAll('.song').forEach((song) => {
         const buttons = song.querySelectorAll('.switch');
         const panels = song.querySelectorAll('.inst-panel');
